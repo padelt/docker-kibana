@@ -1,2 +1,1 @@
-mkdir -p /mnt/container-data
-docker run -d -v /mnt/container-data/elasticsearch/data:/elasticsearch/data -v /mnt/container-data/elasticsearch/logs:/elasticsearch/logs -p 80:80 -p 9200:9200 -p 49021:49021 -t kibana
+docker run -d -v /mnt/elasticsearch/data:/elasticsearch/data -v /mnt/elasticsearch/logs:/elasticsearch/logs -p 80:80 -p 9200:9200 -p 49021:49021 -t kibana
