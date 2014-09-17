@@ -22,7 +22,7 @@ RUN curl https://download.elasticsearch.org/elasticsearch/elasticsearch/elastics
 RUN curl https://download.elasticsearch.org/kibana/kibana/kibana-3.1.0.tar.gz | tar xz && \
     mv kibana-* /kibana
 RUN sed -i -e 's|elasticsearch:.*|elasticsearch: "http://" + window.location.hostname + ":" + 9200,|' /kibana/config.js
-RUN rm -rf /var/www/html/* && mv /kibana/* /var/www/html/
+RUN rm -rf /var/www/html/* && mv /kibana /var/www/html
 
 # Logstash
 RUN curl https://download.elasticsearch.org/logstash/logstash/logstash-1.4.1.tar.gz | tar xz 
